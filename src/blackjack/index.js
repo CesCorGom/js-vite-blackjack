@@ -5,8 +5,7 @@ import { crearBarajaVU} from  './usecases'
 (()=>
 {
         'use strict'
-        let cartas=[],cartasJugador=[],cartasComputadora=[];
-
+    let cartas=[],cartasJugador=[],cartasComputadora=[];
     let totalJugador=0,totalComputadora =0,asesjug=0,asescompu=0;
     let htmljug= document.getElementById("jugador-cartas"),htmlcom=document.getElementById("computadora-cartas");
 
