@@ -117,7 +117,7 @@ import { crearBarajaVU} from  './usecases'
         cartas.splice(numeroAleatorio,1);
         document.getElementById("resultadoJug").innerHTML = totalJugador; 
         const imgCarta=document.createElement('img');
-        imgCarta.src= `assets/cartas/${carta.imagen}`;
+        imgCarta.src= `public/cartas/${carta.imagen}`;
         imgCarta.classList.add('carta');
         impriCartasJug.append(imgCarta);
         mas21();
@@ -151,7 +151,7 @@ import { crearBarajaVU} from  './usecases'
             }
             cartas.splice(numeroAleatorio,1);
             const imgCarta=document.createElement('img');
-            imgCarta.src= `/cartas/${carta.imagen}`;
+            imgCarta.src= `public/cartas/${carta.imagen}`;
             imgCarta.classList.add('carta');
             impriCartasCom.append(imgCarta);
             document.getElementById("resultadoCom").innerHTML = totalComputadora;
@@ -193,12 +193,15 @@ import { crearBarajaVU} from  './usecases'
                     cartas.splice(numeroAleatorio,1);
                     document.getElementById("resultadoCom").innerHTML = totalComputadora;
                     const imgCarta=document.createElement('img');
-                    imgCarta.src= `/cartas/${carta.imagen}`;
+                    imgCarta.src= `public/cartas/${carta.imagen}`;
                     imgCarta.classList.add('carta');
                     impriCartasCom.append(imgCarta);
                     setTimeout(()=>
                     {
-                        ganador();
+                        if(cartasComputadora.length>2){
+                            ganador();
+                        }
+                        
                 
                             
                       turnoComputadora();
