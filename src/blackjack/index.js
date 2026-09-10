@@ -117,7 +117,7 @@ import { crearBarajaVU} from  './usecases'
         cartas.splice(numeroAleatorio,1);
         document.getElementById("resultadoJug").innerHTML = totalJugador; 
         const imgCarta=document.createElement('img');
-        imgCarta.src= `/cartas/${carta.imagen}`;
+        imgCarta.src= `assets/cartas/${carta.imagen}`;
         imgCarta.classList.add('carta');
         impriCartasJug.append(imgCarta);
         mas21();
